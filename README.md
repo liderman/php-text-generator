@@ -10,7 +10,7 @@ This package implements the functionality of a similar package for Go Lang – [
 Installation
 ------------
 
-    composer install liderman/php-text-generator
+    composer require liderman/php-text-generator
     
 Usage
 -----
