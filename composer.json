@@ -1,0 +1,23 @@
+{
+    "name": "liderman/php-text-generator",
+    "description": "Fast SEO text generator on a mask",
+    "keywords": ["seo", "text", "generator", "mask"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Konstantin Osipov",
+            "email": "k.osipov.msk@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Liderman\\TextGenerator\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9"
+    }
+}
