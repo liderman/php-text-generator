@@ -7,6 +7,11 @@ It supports multiple encodings.
 
 This package implements the functionality of a similar package for Go Lang – [text-generator](https://github.com/liderman/text-generator).
 
+[![Latest Stable Version](https://poser.pugx.org/liderman/php-text-generator/v/stable)](https://packagist.org/packages/liderman/php-text-generator)
+[![Total Downloads](https://poser.pugx.org/liderman/php-text-generator/downloads)](https://packagist.org/packages/liderman/php-text-generator)
+[![Latest Unstable Version](https://poser.pugx.org/liderman/php-text-generator/v/unstable)](https://packagist.org/packages/liderman/php-text-generator)
+[![License](https://poser.pugx.org/liderman/php-text-generator/license)](https://packagist.org/packages/liderman/php-text-generator)
+
 Installation
 ------------
 
