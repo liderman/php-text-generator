@@ -58,6 +58,16 @@ class TextGeneratorTest extends \PHPUnit_Framework_TestCase
             $textGen->generate("{|}"),
             ''
         );
+
+        for ($i = 0; $i < 100; $i++) {
+            $this->assertContains(
+                $textGen->generate("{aaa {bbb|bbb|bbb}|aaa|aaa}, {ccc|ccc}! {ddd|ddd}?"),
+                [
+                    'aaa, ccc! ddd?',
+                    'aaa bbb, ccc! ddd?',
+                ]
+            );
+        }
     }
 
     public function testCustomConfig()

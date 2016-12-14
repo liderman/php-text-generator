@@ -173,7 +173,8 @@ class TextGenerator implements TextGeneratorInterface
         $lastPos = 0;
         $isIgnore = false;
         $parts = [];
-        for ($i = 0; $i < mb_strlen($text, $this->encoding); $i++) {
+        $textLen = mb_strlen($text, $this->encoding);
+        for ($i = 0; $i < $textLen; $i++) {
             $currentChar = mb_substr($text, $i, 1, $this->encoding);
             if ($currentChar === $this->startTag) {
                 $openLevel++;
@@ -195,7 +196,7 @@ class TextGenerator implements TextGeneratorInterface
             }
 
             if ($currentChar === $this->separator) {
-                $parts[] = mb_substr($text, $lastPos, $i, $this->encoding);
+                $parts[] = mb_substr($text, $lastPos, ($i - $lastPos), $this->encoding);
                 $lastPos = $i + 1;
             }
         }
