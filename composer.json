@@ -1,7 +1,12 @@
 {
     "name": "liderman/php-text-generator",
     "description": "Fast SEO text generator on a mask",
-    "keywords": ["seo", "text", "generator", "mask"],
+    "keywords": [
+        "seo",
+        "text",
+        "generator",
+        "mask"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,13 +16,33 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Liderman\\TextGenerator\\": "" },
-        "exclude-from-classmap": [
-            "/Tests/"
-        ]
+        "psr-4": {
+            "Liderman\\TextGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4" : {
+            "Liderman\\TextGenerator\\Tests\\": "tests/"
+        }
     },
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0.0",
+        "phpstan/phpstan": "^0.9.0"
+    },
+    "scripts": {
+        "phpunit": [
+            "vendor/bin/phpunit"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyze src tests -c phpstan.neon --level=7"
+        ],
+        "test": [
+            "@phpunit",
+            "@phpstan"
+        ]
     }
 }

@@ -7,6 +7,7 @@ It supports multiple encodings.
 
 This package implements the functionality of a similar package for Go Lang – [text-generator](https://github.com/liderman/text-generator).
 
+[![Build Status](https://travis-ci.org/liderman/php-text-generator.svg)](https://travis-ci.org/liderman/php-text-generator)
 [![Latest Stable Version](https://poser.pugx.org/liderman/php-text-generator/v/stable)](https://packagist.org/packages/liderman/php-text-generator)
 [![Total Downloads](https://poser.pugx.org/liderman/php-text-generator/downloads)](https://packagist.org/packages/liderman/php-text-generator)
 [![Latest Unstable Version](https://poser.pugx.org/liderman/php-text-generator/v/unstable)](https://packagist.org/packages/liderman/php-text-generator)
@@ -48,6 +49,8 @@ Features
 * Easy wrapping thanks to the integrated interface
 * Covered tests
 * Written by PSR standards and 100% covered with documentation (PHP-Doc)
+* Without external dependencies
+* The code is checked by the static analyzer PhpStan lvl 7
 
 Requirements
 -----------
