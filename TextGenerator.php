@@ -172,7 +172,7 @@ class TextGenerator implements TextGeneratorInterface
         $openLevel = 0;
         $lastPos = 0;
         $isIgnore = false;
-        $parts = [];
+        $parts = array();
         $textLen = mb_strlen($text, $this->encoding);
         for ($i = 0; $i < $textLen; $i++) {
             $currentChar = mb_substr($text, $i, 1, $this->encoding);
