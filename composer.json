@@ -30,6 +30,7 @@
         "php": "^7.0"
     },
     "require-dev": {
+        "doctrine/instantiator": "~1.0.2",
         "phpunit/phpunit": "^5.0.0",
         "phpstan/phpstan": "^0.10.0@dev"
     },
