@@ -15,7 +15,7 @@ use Liderman\TextGenerator\TextGenerator;
 
 class TextGeneratorTest extends \PHPUnit\Framework\TestCase
 {
-    public function testGenerator()
+    public function testGenerator(): void
     {
         $textGen = new TextGenerator();
 
@@ -70,7 +70,7 @@ class TextGeneratorTest extends \PHPUnit\Framework\TestCase
         }
     }
 
-    public function testCustomConfig()
+    public function testCustomConfig(): void
     {
         $textGen = new TextGenerator();
         $textGen->setStartTag('[');
@@ -83,7 +83,7 @@ class TextGeneratorTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testConstructor()
+    public function testConstructor(): void
     {
         $textGen = new TextGenerator('<', '>', '!');
 

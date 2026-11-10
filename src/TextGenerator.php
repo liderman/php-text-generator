@@ -74,6 +74,8 @@ class TextGenerator implements TextGeneratorInterface
      * Set start tag.
      *
      * @param string $startTag Start tag
+     *
+     * @return void
      */
     public function setStartTag($startTag = self::DEF_START_TAG)
     {
@@ -84,6 +86,8 @@ class TextGenerator implements TextGeneratorInterface
      * Set end tag.
      *
      * @param string $endTag End tag
+     *
+     * @return void
      */
     public function setEndTag($endTag = self::DEF_END_TAG)
     {
@@ -94,6 +98,8 @@ class TextGenerator implements TextGeneratorInterface
      * Set separator.
      *
      * @param string $separator Separator
+     *
+     * @return void
      */
     public function setSeparator($separator = self::DEF_SEPARATOR)
     {
@@ -104,6 +110,8 @@ class TextGenerator implements TextGeneratorInterface
      * Set encoding.
      *
      * @param string $encoding Encoding
+     *
+     * @return void
      */
     public function setEncoding($encoding = 'UTF-8')
     {

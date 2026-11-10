@@ -11,6 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         php: ['7.3', '7.4']
     steps:
@@ -21,11 +22,6 @@ jobs:
           extensions: mbstring
           coverage: none
           tools: composer:v2
-      - name: Refresh development lock file for security migration
-        run: composer update --no-interaction --prefer-dist --no-plugins --no-scripts
-      - name: Export refreshed lock file
-        if: matrix.php == '7.4'
-        run: base64 -w 0 composer.lock
       - run: composer validate --strict
       - run: composer install --no-interaction --prefer-dist
       - run: composer check-platform-reqs
