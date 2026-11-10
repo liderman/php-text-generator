@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.3', '7.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring
+          coverage: none
+          tools: composer:v2
+      - run: composer validate --strict
+      - run: composer install --no-interaction --prefer-dist
+      - run: composer check-platform-reqs
+      - run: composer audit --locked
+      - run: composer test
