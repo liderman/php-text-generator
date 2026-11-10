@@ -13,7 +13,7 @@ namespace Liderman\TextGenerator\Tests;
 
 use Liderman\TextGenerator\TextGenerator;
 
-class TextGeneratorTest extends \PHPUnit_Framework_TestCase
+class TextGeneratorTest extends \PHPUnit\Framework\TestCase
 {
     public function testGenerator()
     {

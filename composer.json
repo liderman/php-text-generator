@@ -25,13 +25,17 @@
             "Liderman\\TextGenerator\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
     "require": {
         "php": "^7.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.0.0",
-        "phpstan/phpstan": "^0.10.0@dev"
+        "phpunit/phpunit": "^9.6.33",
+        "phpstan/phpstan": "^1.12"
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.33"
+        }
     },
     "scripts": {
         "phpunit": [
